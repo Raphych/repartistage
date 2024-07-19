@@ -10,7 +10,7 @@ export const routes = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorBoundary />,
     children: [
-      { path: "/", element: <Home /> },
+      { path: "/repartistage", element: <Home /> },
     ]
   }
 ])
