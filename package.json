@@ -1,5 +1,5 @@
 {
-  "homepage": "http://raphych.github.io/repartistage",
+  "homepage": "https://raphych.github.io/repartistage",
   "name": "stages",
   "version": "0.1.0",
   "private": true,
@@ -11,6 +11,7 @@
     "@types/node": "^16.18.101",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "gh-pages": "^6.1.1",
     "hungarian-on3": "^0.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
