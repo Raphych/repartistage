@@ -6,7 +6,7 @@ export default function ErrorBoundary() {
         switch (error) {
             case 404: return "404 Not Found";
             case 500: return "Server Error";
-            default: return "Error"
+            default: return `${error}`;
         }
     }
     return (
