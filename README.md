@@ -1,3 +1,6 @@
+# Description
+Utilise l'algorithme hongrois pour répartir des stages selon les préférences des stagiaires en téléversant un fichier Excel.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
