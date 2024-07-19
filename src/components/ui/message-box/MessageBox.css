@@ -1,0 +1,13 @@
+.message-box {
+    padding: var(--space-md) var(--space-lg);
+}
+
+.message-box.warning {
+    color: var(--warning-text-color);
+    background-color: var(--warning-background-color);
+}
+
+.message-box.error {
+    color: var(--error-text-color);
+    background-color: var(--error-background-color);
+}

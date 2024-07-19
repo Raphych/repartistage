@@ -1,0 +1,26 @@
+.invisible, .invisible::before, .invisible::after {
+    opacity: 0;
+}
+
+.loading {
+    opacity: 1;
+    animation: pulse-opacity 1.8s infinite;
+}
+
+.active, .pending {
+    font-weight: bold;
+}
+
+@keyframes pulse-opacity {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

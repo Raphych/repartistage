@@ -1,0 +1,97 @@
+/* Dark Mode */
+.App.dark {
+    --primary-color: #4e94e5;
+    --secondary-color: #8c9196;
+    --accent-color: #70ad54;
+    
+    --text-color: #ffffff;
+    --text-color-secondary: #dcdcdc;
+    --text-color-on-surface: #e0e0e0;
+    --text-color-disabled: #6c757d;
+    
+    --background-color: #343a40;
+    --background-color-secondary: #2c2f33;
+    --background-color-tertiary: #1f2327;
+    --background-color-disabled: #5a5f66;
+    
+    --icon-color: #ffffff;
+    --icon-color-secondary: #b0b0b0;
+    --icon-color-disabled: #6c757d;
+
+    --border-color: #444950;
+    --border-color-secondary: #5a5f66;
+    --border-color-disabled: #6c757d;
+
+    --input-text-color: #343a40;
+
+    --hover-color: rgba(255, 255, 255, 0.1);
+    --focus-color: rgba(255, 255, 255, 0.2);
+
+    --error-text-color: #881526;
+    --error-background-color: #fa5566;
+    --warning-text-color: #856313;
+    --warning-background-color: #f8cb45;
+    --info-color: #4e94e5;
+
+    --link-color: var(--primary-color);
+    --link-hover-color: #3b7dcc;
+    --link-active-color: #2f6bb1;
+    --link-disabled-color: #6c757d;
+
+    --primary-hover-color: #3b7dcc;
+    --secondary-hover-color: #7c8288;
+    --accent-hover-color: #5d9445;
+
+    --primary-active-color: #2f6bb1;
+    --secondary-active-color: #6e737a;
+    --accent-active-color: #4e7c3c;
+}
+
+/* Light Mode */
+.App.light {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --accent-color: #28a745;
+    
+    --text-color: #333;
+    --text-color-secondary: #555;
+    --text-color-on-surface: #444;
+    --text-color-disabled: #a1a1a1;
+    
+    --background-color: #fff;
+    --background-color-secondary: #f8f9fa;
+    --background-color-tertiary: #e9ecef;
+    --background-color-disabled: #e0e0e0;
+    
+    --icon-color: #333;
+    --icon-color-secondary: #777;
+    --icon-color-disabled: #a1a1a1;
+
+    --border-color: #ced4da;
+    --border-color-secondary: #dee2e6;
+    --border-color-disabled: #d6d6d6;
+
+    --input-text-color: #333;
+
+    --hover-color: rgba(0, 0, 0, 0.1);
+    --focus-color: rgba(0, 0, 0, 0.2);
+
+    --error-text-color: #990715;
+    --error-background-color: #e96673;
+    --warning-text-color: #8d6b07;
+    --warning-background-color: #fdd14d;
+    --info-color: #17a2b8;
+
+    --link-color: var(--primary-color);
+    --link-hover-color: #0056b3;
+    --link-active-color: #004085;
+    --link-disabled-color: #a1a1a1;
+
+    --primary-hover-color: #0056b3;
+    --secondary-hover-color: #5a6268;
+    --accent-hover-color: #218838;
+
+    --primary-active-color: #004085;
+    --secondary-active-color: #545b62;
+    --accent-active-color: #1e7e34;
+}

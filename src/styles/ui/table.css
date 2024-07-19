@@ -1,0 +1,30 @@
+.table-container {
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--background-color-tertiary);
+}
+
+table th {
+    background-color: var(--info-color);
+}
+table td {
+    word-wrap: break-word;
+}
+table th .sortable {
+    cursor: pointer;
+}
+table th .sortable:hover {
+    background-color: var(--background-color-secondary);
+}
+
+table th, table td {
+    padding: var(--space-xs) var(--space-sm);
+}

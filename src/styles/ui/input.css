@@ -1,0 +1,6 @@
+input {
+    max-width: 100%;
+}
+input, input::placeholder {
+    color: var(--input-text-color);
+}

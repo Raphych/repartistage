@@ -1,0 +1,29 @@
+a {
+    color: var(--link-color);
+    transition: color var(--transition-duration) var(--transition-easing),
+        text-decoration var(--transition-duration) var(--transition-easing);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: var(--link-hover-underline);
+}
+
+a:active {
+    color: var(--link-active-color);
+    transform: var(--link-active-transform);
+}
+
+a[disabled] {
+    color: var(--link-disabled-color);
+    pointer-events: none;
+}
+
+a.link-new {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+}
+a.link-new:hover {
+    background-color: var(--primary-color);
+}

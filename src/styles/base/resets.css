@@ -1,0 +1,65 @@
+/* Generic CSS Reset */
+html {
+    box-sizing: border-box;
+    font-family: sans-serif; /* Change to your preferred font */
+    line-height: 1.6;
+    font-size: 100%; /* 16px */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #fff;
+    color: #333;
+}
+
+main {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+ul, ul[role="list"], ol[role="list"] {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
