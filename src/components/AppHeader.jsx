@@ -5,7 +5,9 @@ import {
     CNavLink,
 } from '@coreui/react'
 
+
 export default function AppHeader() {
+    const basename = '/repartistage'
     // const { colorMode, setColorMode } = useColorModes('coreui-free-react-admin-template-theme')
 
     return (
@@ -13,8 +15,8 @@ export default function AppHeader() {
         <CNavbar expand="sm" className="bg-body-tertiary">
           <CContainer fluid>
               <CNavbarNav as="nav">
-                <CNavLink href="/">Repartition</CNavLink>
-                <CNavLink href="/tutoriel">Tutoriel</CNavLink>
+                <CNavLink href={`${basename}/`}>Repartition</CNavLink>
+                <CNavLink href={`${basename}/tutoriel`}>Tutoriel</CNavLink>
               </CNavbarNav>
           </CContainer>
         </CNavbar>

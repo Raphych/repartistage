@@ -9,10 +9,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const Repartition = React.lazy(() => import('./views/Repartition/Repartition'))
 const Tutoriel = React.lazy(() => import('./views/Tutoriel/Tutoriel'))
 
+const basename = '/repartistage/' // || process.env.REACT_APP_BASENAME;
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
             <Suspense
                 fallback={
                     <div className="pt-3 text-center">
@@ -22,6 +23,7 @@ function App() {
             >
                 <Layout>
                     <Routes>
+                        
                         <Route
                             exact
                             path='/'
