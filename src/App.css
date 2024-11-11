@@ -1,0 +1,21 @@
+table tr, table th {
+  overflow-y: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+table th {
+  max-width: 100%;
+  overflow: auto;
+}
+
+table td {
+  max-width: 100px;
+  overflow-x: hidden;
+}
+
+td.long-text {
+  max-height: 100px; /* Set max height for rows with long text */
+  overflow-y: auto; /* Add vertical scrolling if content exceeds max height */
+  white-space: normal; /* Allows text to wrap */
+}

@@ -1,6 +1,6 @@
 import { cibLibreoffice } from "@coreui/icons";
 import CIcon from "@coreui/icons-react";
-import { CButton, CTable, CTableBody, CTableDataCell, CTableHead, CTableHeaderCell, CTableRow } from "@coreui/react";
+import { CButton, CFormLabel, CFormSelect, CTable, CTableBody, CTableDataCell, CTableHead, CTableHeaderCell, CTableRow } from "@coreui/react";
 import { CSpinner } from "@coreui/react";
 import { flexRender, getCoreRowModel, getFilteredRowModel, getPaginationRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table";
 import { minWeightAssign } from "munkres-algorithm";
@@ -38,13 +38,14 @@ export default function Resultats({ matrix, preferences, headers, stages, stagia
                         // if (header.value === "meta-stagiaire") {
                         //     obj["meta-stagiaire"][header.label] = stagiaireRow[i]
                         // }
-                        if (header.value === 'id' || header.value === 'meta-stagiaire' )
+                        if (header.value === 'id' || header.value === 'meta-stagiaire')
                             obj[header.label] = stagiaireRow[i]
                         else if (header.value === 'idStage' || header.value === 'meta-stage')
                             obj[header.label] = stageRow[i]
                     }
                 })
-                obj['preference'] = matrix[i][col]
+                const prefName = headers.find(header => header.value === 'score')
+                if (prefName) obj[prefName.label] = matrix[i][col]
                 displayTable.push(obj)
             })
             setTable(displayTable)
@@ -65,6 +66,9 @@ export default function Resultats({ matrix, preferences, headers, stages, stagia
 
 function ResultsTable({ data, headers }) {
 
+    const [pageIndex, setPageIndex] = useState(0);
+    const [pageSize, setPageSize] = useState(10);
+
     const columns = headers?.map(header => {
         if (!!header.value && header.value !== '' && header.value !== 'nbPlaces')
             return ({
@@ -73,13 +77,19 @@ function ResultsTable({ data, headers }) {
             })
     }).filter(header => header !== undefined)
 
+    // Function to handle pagination state
+    function setPagination({ pageIndex, pageSize }) {
+        setPageIndex(pageIndex);
+        setPageSize(pageSize);
+    }
+
     const table = useReactTable({
         columns,
         data,
+        // state: { pagination: { pageIndex, pageSize } },
+        // onPaginationChange: setPagination,
         getCoreRowModel: getCoreRowModel(),
-        getFilteredRowModel: getFilteredRowModel(),
-        getPaginationRowModel: getPaginationRowModel(),
-        getSortedRowModel: getSortedRowModel(),
+        // getPaginationRowModel: getPaginationRowModel(),
     })
 
     if (!columns) return <CSpinner />
@@ -189,6 +199,42 @@ function ResultsTable({ data, headers }) {
                     ))}
                 </CTableBody>
             </CTable>
+
+            {/* Pagination controls */}
+            {/* <div className="d-flex gap-2 align-items-center mt-3">
+                <CButton
+                    color="primary"
+                    onClick={() => table.previousPage()}
+                    disabled={!table.getCanPreviousPage()}
+                >
+                    Précédent
+                </CButton>
+                <span>Page {table.getState().pagination.pageIndex + 1} de {table.getPageCount()}</span>
+                <CButton
+                    color="primary"
+                    onClick={() => table.nextPage()}
+                    disabled={!table.getCanNextPage()}
+                >
+                    Suivant
+                </CButton>
+            </div>
+
+            <div className="mt-2">
+                <CFormLabel className="me-2">
+                    Rangées par page:
+                </CFormLabel>
+                <CFormSelect
+                className="d-inline w-25"
+                    value={table.getState().pagination.pageSize}
+                    onChange={e => setPageSize(Number(e.target.value))}
+                >
+                    {[5, 10, 20, 50].map(size => (
+                        <option key={size} value={size}>
+                            {size}
+                        </option>
+                    ))}
+                </CFormSelect>
+            </div> */}
         </>
     );
 }

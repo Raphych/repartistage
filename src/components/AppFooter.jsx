@@ -5,7 +5,7 @@ const AppFooter = () => {
     <CFooter className='mt-4 pt-3'>
       <CCol className='col-12'>
         <p className="px-4 text-center">
-          <small>Des Questions?<br/>raphnunez@gmail.com</small>
+          <small>Pour contribuer :<br/>https://github.com/Raphych/repartistage</small>
         </p>
       </CCol>
     </CFooter>

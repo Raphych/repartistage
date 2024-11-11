@@ -1,6 +1,6 @@
 import { CButton, CSpinner, CTab, CTabContent, CTabList, CTabPanel, CTabs } from "@coreui/react";
-import { useEffect, useState } from "react";
-import CopyTable from "./CopyTable";
+import {  useState } from "react";
+import {CopyTable, AddFromXLSX} from "./CopyTable";
 import Colonnes from "./Colonnes";
 import Resultats from "./Resultats";
 
@@ -23,11 +23,6 @@ export default function Repartition() {
         setStageIndex(stageIndex)
     }
 
-    // useEffect(() => {
-    //     if (!!headers && !!preferences)
-    //         handleSetResults();
-    // }, [headers, preferences])
-
     return (
         <CTabs activeItemKey="preferences" onChange={(val) => { if (val === 'resultats') handleSetResults() }}>
             <CTabList variant="tabs">
@@ -37,7 +32,9 @@ export default function Repartition() {
             </CTabList>
             <CTabContent>
                 <CTabPanel className="p-3" itemKey="preferences">
+                <p className="my-3"><em>Veuillez téléverser votre fichier Excel ou copier-coller directement votre table.</em></p>
                     <div className="my-4">
+                        <AddFromXLSX setList={setPreferences} setHeaders={setHeaders} />
                         <CopyTable setList={setPreferences} setHeaders={setHeaders} />
                     </div>
                     <CButton color="success" disabled={!preferences}><CTab itemKey="colonnes">Suivant</CTab></CButton>

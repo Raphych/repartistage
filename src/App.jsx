@@ -31,12 +31,12 @@ function App() {
                             element={<Repartition />}
                         />
 
-                        <Route
+                        {/* <Route
                             exact
                             path='/tutoriel'
                             name="Tutoriel"
                             element={<Tutoriel />}
-                        />
+                        /> */}
                     </Routes>
                 </Layout>
             </Suspense>

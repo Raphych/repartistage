@@ -16,7 +16,7 @@ export default function AppHeader() {
           <CContainer fluid>
               <CNavbarNav as="nav">
                 <CNavLink href={`${basename}/`}>Repartition</CNavLink>
-                <CNavLink href={`${basename}/tutoriel`}>Tutoriel</CNavLink>
+                {/* <CNavLink href={`${basename}/tutoriel`}>Tutoriel</CNavLink> */}
               </CNavbarNav>
           </CContainer>
         </CNavbar>
