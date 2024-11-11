@@ -30,19 +30,21 @@ export default function Resultats({ matrix, preferences, headers, stages, stagia
                 const stage = stages[col]
                 const stagiaireRow = preferences?.find(preference => preference[stagiaireColIndex] === stagiaire)
 
-                const obj = { "meta-stagiaire": {}, "meta-stage": {} }
+                const stageRow = preferences?.find(preference => preference[stageColIndex] === stage)
+
+                const obj = {}
                 headers?.forEach((header, i) => {
                     if (!!stagiaireRow[i]) {
                         // if (header.value === "meta-stagiaire") {
                         //     obj["meta-stagiaire"][header.label] = stagiaireRow[i]
                         // }
-                        // else if (header.value === "meta-stage") {
-                        //     obj["meta-stage"][header.label] = stagiaireRow[i]
-                        // }
-                        // else
+                        if (header.value === 'id' || header.value === 'meta-stagiaire' )
                             obj[header.label] = stagiaireRow[i]
+                        else if (header.value === 'idStage' || header.value === 'meta-stage')
+                            obj[header.label] = stageRow[i]
                     }
                 })
+                obj['preference'] = matrix[i][col]
                 displayTable.push(obj)
             })
             setTable(displayTable)

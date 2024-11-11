@@ -1,3 +1,3 @@
 export default function Tutoriel() {
-    return <div>Tuto</div>
+    return <div>Détails à venir...</div>
 }

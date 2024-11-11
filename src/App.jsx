@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const Repartition = React.lazy(() => import('./views/Repartition/Repartition'))
 const Tutoriel = React.lazy(() => import('./views/Tutoriel/Tutoriel'))
 
-const basename = '/repartistage/' // || process.env.REACT_APP_BASENAME;
+const basename = '/repartistage' // || process.env.REACT_APP_BASENAME;
 
 function App() {
     return (
