@@ -1,4 +1,4 @@
-@charset "UTF-8";/*!
+@charset "UTF-8";table tr,table th{overflow-y:auto;text-overflow:ellipsis;white-space:nowrap}table th{max-width:100%;overflow:auto}table td{max-width:100px;overflow-x:hidden}td.long-text{max-height:100px;overflow-y:auto;white-space:normal}/*!
 * CoreUI  v5.1.2 (https://coreui.io)
 * Copyright (c) 2024 creativeLabs Łukasz Holeczek
 * Licensed under MIT (https://github.com/coreui/coreui/blob/main/LICENSE)
